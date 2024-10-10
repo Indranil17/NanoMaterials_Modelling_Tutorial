@@ -3,9 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NanoMaterials Open Day 2024</title>
+    <title>Machine Learning in Computational Chemistry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        section {
+            background: #fff;
+            padding: 2rem;
+            margin: 1rem 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            font-size: 1.1em;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #555;
+        }
+        code {
+            display: block;
+            padding: 1rem;
+            background-color: #e0e0e0;
+            margin: 1rem 0;
+        }
+        pre {
+            background-color: #e0e0e0;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .interactive {
+            margin-top: 1rem;
+        }
+        iframe {
+            border: none;
+            width: 100%;
+            height: 400px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <h1>NanoMaterials_OpenDay2024</h1>
+
+    <header>
+        <h1>Welcome to Machine Learning in Computational Chemistry</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Introduction: The Magic of Machine Learning in Science</h2>
+            <p>In the world of science and technology, Machine Learning (ML) has become a game-changer. It allows computers to find patterns in vast amounts of data and make predictions, often leading to new scientific insights. This year’s Nobel Prize in Chemistry was awarded to <strong>Demis Hassabis</strong>, <strong>John Jumper</strong>, and <strong>David Baker</strong> for their groundbreaking work on predicting protein structures using ML. Their work revolutionized how we understand proteins, which are critical to all life forms. Read more about the Chemistry Nobel Prize <a href="https://www.nobelprize.org/prizes/chemistry/2024/popular-information/" target="_blank">here</a>.</p>
+            
+            <p>Additionally, the <strong>Nobel Prize in Physics</strong> was awarded to <strong>John Hopfield</strong> and <strong>Geoffrey Hinton</strong> for their foundational contributions to artificial neural networks. These neural networks are a key component of modern ML systems, forming the backbone of innovations across various fields, including chemistry and physics. Learn more about the Physics Nobel Prize <a href="https://www.nobelprize.org/prizes/physics/2024/popular-information/" target="_blank">here</a>.</p>
+            
+            <p><strong>What if we told you that machines can help us uncover secrets about chemical structures and reactions?</strong> Today, you’ll see how ML helps us solve complex problems in <strong>computational chemistry</strong>, such as predicting the stability of materials like <strong>zeolites</strong>, which are used in catalysis and energy applications.</p>
+        </section>
+        
+          
+
+        <section>
+            <h2>Interactive Example: Train Your Own Machine Learning Model</h2>
+            <p>Let’s start with an example you can try yourself! Head over to <a href="https://teachablemachine.withgoogle.com/train" target="_blank">Google's Teachable Machine</a> and build a simple ML model in minutes.</p>
+            <h3>How to Train Your Model:</h3>
+            <ol>
+                <li>Open the <a href="https://teachablemachine.withgoogle.com/train" target="_blank">Teachable Machine</a>.</li>
+                <li>Select "Image Project" and capture/upload different objects around you (such as your hand, a pencil, or a book).</li>
+                <li>Train the model using at least two categories.</li>
+                <li>Once trained, see how well your model can distinguish between the objects you uploaded.</li>
+            </ol>
+            <p>This fun activity gives you a taste of how machine learning works. In chemistry, we use similar processes with much more complex data to solve big scientific problems.</p>
+        </section>
+
+        <section>
+            <h2>Example: Zeolites and Their Properties</h2>
+            <p>Zeolites are fascinating materials used in many fields like catalysis and gas separation. Their performance often depends on their <strong>structure</strong>, which in turn is influenced by the arrangement of atoms. In this example, we explore how <strong>Germanium (Ge)</strong> atoms distribute within a zeolite structure and how that affects their <strong>stability</strong>.</p>
+            <p>For more information on this topic, check out the following research paper: <a href="https://pubs.rsc.org/en/content/articlelanding/2024/cy/d4cy00763h" target="_blank">Zeolite structure-property relationships</a>.</p>
+            <p><strong>Visualization:</strong> Check out the <strong>Blender models</strong> of different zeolite structures with varying <strong>Ge atom distributions</strong>. (You can embed 3D models here using iframe or Blender plugins.)</p>
+        </section>
+
+        <section>
+            <h2>Interactive Code: Build a Simple Regression Model</h2>
+            <p>Below is a regression model where you can input data and see how well it predicts outcomes. We’re predicting the <strong>energy</strong> of a zeolite structure based on its <strong>Ge-O-Ge atom counts</strong>.</p>
+
+            <pre><code>
+# Simple regression model example in Python (sklearn)
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Sample data: Ge-O-Ge counts and corresponding energies
+X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
+y = np.array([3, 4, 2, 5, 7])
+
+# Initialize the model
+model = LinearRegression()
+model.fit(X, y)
+
+# Predict
+new_X = np.array([input("Enter a new Ge-O-Ge count: ")]).reshape(-1, 1)
+predicted_energy = model.predict(new_X)
+
+# Plot the regression line
+plt.scatter(X, y, color='blue')
+plt.plot(X, model.predict(X), color='red')
+plt.xlabel('Ge-O-Ge Count')
+plt.ylabel('Energy')
+plt.title('Energy vs Ge-O-Ge Count')
+plt.show()
+
+print(f"The predicted energy for Ge-O-Ge count {new_X[0][0]} is {predicted_energy[0]}")
+            </code></pre>
+
+            <p>Try adjusting the inputs and observe how the energy changes. You'll also see the linear regression fit visually!</p>
+        </section>
+
+        <section>
+            <h2>Real Data Visualization: UMAP Plots of Energy vs Ge-O-Ge Count</h2>
+            <p>Now that you’ve seen a simple example, let's explore real scientific data. We use <strong>UMAP (Uniform Manifold Approximation and Projection)</strong> to visualize relationships between <strong>energy</strong> and <strong>Ge-O-Ge counts</strong> in real zeolite structures.</p>
+            <iframe src="your-UMAP-visualization-link-here"></iframe>
+            <p>UMAP helps us group similar structures and observe patterns that might otherwise be difficult to find. This data visualization shows how the distribution of <strong>Ge atoms</strong> affects the stability of zeolites.</p>
+        </section>
+
+        <section>
+            <h2>Machine Learning Insights: Energy Prediction</h2>
+            <p>Using real data, we see how machine learning provides insights that help predict the stability of new zeolite structures before they are even synthesized in a lab. By training models on existing data, we can forecast how changing atomic arrangements will affect energy and stability.</p>
+            <p>The regression model you interacted with earlier is just one example. In research, more advanced models like <strong>neural networks</strong> and <strong>decision trees</strong> are used to predict material properties with higher accuracy.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Machine Learning in Computational Chemistry | Hosted on GitHub</p>
+    </footer>
+
 </body>
 </html>
