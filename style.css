@@ -1,0 +1,66 @@
+/* style.css */
+
+/* General body styling */
+body {
+    background-color: #f4f4f9;  /* Light grayish background for readability */
+    color: #333333;  /* Dark gray text for readability */
+    font-family: 'Arial', sans-serif;  /* Clean and simple font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header styling */
+h1, h2, h3 {
+    color: #7d3cff;  /* A deep blue for the headers */
+    text-align: center;
+}
+
+/* Paragraph styling */
+p {
+    color: #3d3d3f;  /* Slightly lighter gray for paragraphs */
+    text-align: justify;  /* Makes text look neat */
+    padding: 10px;
+    margin: 0 20px;
+}
+
+/* Image styling */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;  /* Ensures images are responsive */
+    height: auto;
+    border: 1px solid #ccc;  /* Light border around images */
+    border-radius: 8px;  /* Adds rounded corners to images */
+}
+
+/* Links styling */
+a {
+    color: #1abc9c;  /* Vibrant teal color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Custom styling for sections */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #fceed151;  /* White background for content sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Adds a soft shadow */
+}
+
+/* Footer styling */
+footer {
+    background-color: #5be2b8;  /* Same blue as headers */
+    color: #ffffff;  /* White text for footer */
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

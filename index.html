@@ -1,167 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
+<div class="thumbnail-container">
+    <img src="\images\thumbnail.png" class="thumbnail">
+</div>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Learning in Computational Chemistry</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        section {
-            background: #fff;
-            padding: 2rem;
-            margin: 1rem 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            font-size: 1.1em;
-        }
-        a {
-            color: #333;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #555;
-        }
-        code {
-            display: block;
-            padding: 1rem;
-            background-color: #e0e0e0;
-            margin: 1rem 0;
-        }
-        pre {
-            background-color: #e0e0e0;
-            padding: 1rem;
-            border-radius: 5px;
-        }
-        .interactive {
-            margin-top: 1rem;
-        }
-        iframe {
-            border: none;
-            width: 100%;
-            height: 400px;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #333;
-            color: #fff;
-        }
-    </style>
+    <title>NanoMaterials Tutorial</title>
+    <link rel="stylesheet" href="style.css">  <!-- Linking the CSS file -->
+<--->
 </head>
 <body>
+<header>
+    <h1>Welcome to Nano-Materials Group Open Day 2024 </h1>
+</header>
 
-    <header>
-        <h1>Welcome to Machine Learning in Computational Chemistry</h1>
-    </header>
-
-    <div class="container">
-        <section>
-            <h2>Introduction: The Magic of Machine Learning in Science</h2>
-            <p>In the world of science and technology, Machine Learning (ML) has become a game-changer. It allows computers to find patterns in vast amounts of data and make predictions, often leading to new scientific insights. This year’s Nobel Prize in Chemistry was awarded to <strong>Demis Hassabis</strong>, <strong>John Jumper</strong>, and <strong>David Baker</strong> for their groundbreaking work on predicting protein structures using ML. Their work revolutionized how we understand proteins, which are critical to all life forms. Read more about the Chemistry Nobel Prize <a href="https://www.nobelprize.org/prizes/chemistry/2024/popular-information/" target="_blank">here</a>.</p>
-            
-            <p>Additionally, the <strong>Nobel Prize in Physics</strong> was awarded to <strong>John Hopfield</strong> and <strong>Geoffrey Hinton</strong> for their foundational contributions to artificial neural networks. These neural networks are a key component of modern ML systems, forming the backbone of innovations across various fields, including chemistry and physics. Learn more about the Physics Nobel Prize <a href="https://www.nobelprize.org/prizes/physics/2024/popular-information/" target="_blank">here</a>.</p>
-            
-            <p><strong>What if we told you that machines can help us uncover secrets about chemical structures and reactions?</strong> Today, you’ll see how ML helps us solve complex problems in <strong>computational chemistry</strong>, such as predicting the stability of materials like <strong>zeolites</strong>, which are used in catalysis and energy applications.</p>
-        </section>
+<div class="container">
+    <section>
+        <h2>Introduction: The Magic of Machine Learning in Science</h2>
+        <p>In the world of science and technology, Machine Learning (ML) has become a game-changer. It allows computers to find patterns in vast amounts of data and make predictions, often leading to new scientific insights. This year’s Nobel Prize in Chemistry was awarded to <strong>Demis Hassabis</strong>, <strong>John Jumper</strong>, and <strong>David Baker</strong> for their groundbreaking work on predicting protein structures using ML. Their work revolutionized how we understand proteins, which are critical to all life forms. Read more about the Chemistry Nobel Prize <a href="https://www.nobelprize.org/prizes/chemistry/2024/popular-information/" target="_blank">here</a>.</p>
         
-          
+        <p>Additionally, the <strong>Nobel Prize in Physics</strong> was awarded to <strong>John Hopfield</strong> and <strong>Geoffrey Hinton</strong> for their foundational contributions to artificial neural networks. These neural networks are a key component of modern ML systems, forming the backbone of innovations across various fields, including chemistry and physics. Learn more about the Physics Nobel Prize <a href="https://www.nobelprize.org/prizes/physics/2024/popular-information/" target="_blank">here</a>.</p>
+        
+        <p><strong>What if we told you that machines can help us uncover secrets about chemical structures and reactions?</strong> Today, you’ll see how ML helps us solve complex problems in <strong><a href="https://www.acs.org/careers/chemical-sciences/fields/computational-chemistry.html" target="_blank">computational chemistry</a></strong>, such as predicting the stability of materials like <strong><a href="https://books.google.cz/books?id=UbWrDwAAQBAJ&lpg=PA109&ots=zVWnHRZR6B&dq=Zeolites%20and%20Catalysis%20%20%20Synthesis%2C%20Reactions%20and%20Applications&lr&pg=PP1#v=onepage&q=Zeolites%20and%20Catalysis%20%20%20Synthesis,%20Reactions%20and%20Applications&f=false" target="_blank">zeolites</a></strong>, which are used in catalysis and energy applications.</p>        
+    </section>
+    
+    <section>
+        <h2>Interactive Example: Train Your Own Machine Learning Model</h2>
+        <p>Let’s start with an example you can try yourself! Head over to <a href="https://teachablemachine.withgoogle.com/train" target="_blank">Google's Teachable Machine</a> and build a simple ML model in minutes.</p>
+        <h3>How to Train Your Model:</h3>
+        <ol>
+            <li>Open the <a href="https://teachablemachine.withgoogle.com/train" target="_blank">Teachable Machine</a>.</li>
+            <li>Select "Image Project" and capture/upload different objects around you (such as your hand, a pencil, or a book).</li>
+            <li>Train the model using at least two categories.</li>
+            <li>Once trained, see how well your model can distinguish between the objects you uploaded.</li>
+        </ol>
+        <p>This fun activity gives you a taste of how machine learning works. In chemistry, we use similar processes with much more complex data to solve big scientific problems.</p>
+        <img src="\images\google_ML.png" alt="Google Machine Learning Example">
+    </section>
+      
 
-        <section>
-            <h2>Interactive Example: Train Your Own Machine Learning Model</h2>
-            <p>Let’s start with an example you can try yourself! Head over to <a href="https://teachablemachine.withgoogle.com/train" target="_blank">Google's Teachable Machine</a> and build a simple ML model in minutes.</p>
-            <h3>How to Train Your Model:</h3>
-            <ol>
-                <li>Open the <a href="https://teachablemachine.withgoogle.com/train" target="_blank">Teachable Machine</a>.</li>
-                <li>Select "Image Project" and capture/upload different objects around you (such as your hand, a pencil, or a book).</li>
-                <li>Train the model using at least two categories.</li>
-                <li>Once trained, see how well your model can distinguish between the objects you uploaded.</li>
-            </ol>
-            <p>This fun activity gives you a taste of how machine learning works. In chemistry, we use similar processes with much more complex data to solve big scientific problems.</p>
-        </section>
+    <section>
+        <h2>Example: Zeolites and Their Properties</h2>
+        <p>Zeolites are fascinating materials used in many fields like catalysis and gas separation. Their performance often depends on their <strong>structure</strong>, which in turn is influenced by the arrangement of atoms. 
+           In this example, we explore how <strong>Germanium (Ge)</strong> atoms distribute within a zeolite structure and how that affects their <strong>stability</strong>.</p>
+        
+        <!-- Image for Ge Distribution -->
+        <div style="text-align: center;">
+            <img src="\images\\utl_ge.png" alt="UTL Ge Example" style="max-width: 50%; height: 50%; border: 1px solid #a0d2eb;">
+            <p>Figure 1: Plot showing the possible arrangements of Germanium atoms (in blue) in the UTL zeolite..</p>
+        </div>
+        
+        <ul>
+            <li><strong>Energetics-Stability:</strong> The stability of zeolite structures can be understood from an energetic standpoint, where lower energy configurations indicate greater stability.</li>
+            <li><strong>Ge-O-Ge Counts:</strong> The counts of Ge-O-Ge bonds serve as a structural parameter, influencing the overall stability and performance of the zeolite material.</li>
+        </ul>
+        
+        <p><strong>Visualization:</strong> Check out the <strong>3D models</strong> of different zeolite structures with varying <strong>Ge atom distributions</strong>.</p>
+        <p>For more information on this topic, check out the following research paper: <a href="https://pubs.rsc.org/en/content/articlelanding/2024/cy/d4cy00763h" target="_blank">Zeolite structure-property relationships</a>.</p>
+    </section>
 
-        <section>
-            <h2>Example: Zeolites and Their Properties</h2>
-            <p>Zeolites are fascinating materials used in many fields like catalysis and gas separation. Their performance often depends on their <strong>structure</strong>, which in turn is influenced by the arrangement of atoms. In this example, we explore how <strong>Germanium (Ge)</strong> atoms distribute within a zeolite structure and how that affects their <strong>stability</strong>.</p>
-            <p>For more information on this topic, check out the following research paper: <a href="https://pubs.rsc.org/en/content/articlelanding/2024/cy/d4cy00763h" target="_blank">Zeolite structure-property relationships</a>.</p>
-            <p><strong>Visualization:</strong> Check out the <strong>Blender models</strong> of different zeolite structures with varying <strong>Ge atom distributions</strong>. (You can embed 3D models here using iframe or Blender plugins.)</p>
-        </section>
+    <section>
+        <h2>ML Potentials for Possible Combinations</h2>
+        <p>In the field of computational chemistry and material science, the exploration of possible structures is immense. With zeolites, for example, the number of potential configurations can reach millions, owing to variations in atom arrangements and compositions. 
+           Machine Learning (ML) techniques offer powerful tools for sampling these vast possibilities and identifying meaningful distributions based on energy stability.</p>
+        
+        <p>To understand the significance of this sampling, consider that for every change in atomic positions, new energy calculations are required. This makes manual exploration impractical, as we are faced with a combinatorial explosion of potential structures. 
+           By leveraging ML models, we can effectively narrow down the search space and focus on the most promising candidates for further investigation.</p>
+    
+        <p>For example, using ML algorithms, we can identify patterns and correlations within the data, allowing us to predict the energies of untested configurations. This not only speeds up the research process but also enhances our understanding of structure-property relationships.</p>
+        
+        <!-- Image for Combinations -->
+        <div style="text-align: center;">
+            <img src="\images\\ML_combinations.png" alt="Possible Structures Visualization" style="max-width: 50%; height: 50%; border: 1px solid #a0d2eb;">
+            <p>Figure 2: Using Machine Learning method number of strucutures considred for distribution of Ge in various zeolites.</p>
+        </div>
+    
+        <p>Through advanced modeling and simulations, researchers can explore this expansive design space to optimize zeolite structures for applications in catalysis, gas separation, and other critical technologies.</p>
+    </section>
 
-        <section>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive Combinations Calculator</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 2rem;
+                background-color: #f4f4f4;
+            }
+            .container {
+                background: #fff;
+                padding: 2rem;
+                margin: 1rem 0;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            input {
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+                width: calc(100% - 1rem);
+            }
+            button {
+                padding: 0.5rem 1rem;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            p.result {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Calculate Possible Combinations</h2>
+            <p>UTL zeolite has 38 T-sites, we replaced 12 of them with Ge, check the possible combinations?</p>
+            <p>Enter the total number of sites and the number of sites you want to replace:</p>
+            <input type="number" id="totalSites" placeholder="Total Number of Sites" required>
+            <input type="number" id="replaceSites" placeholder="Number of Sites to Replace" required>
+            <button onclick="calculateCombinations()">Calculate Combinations</button>
+            <p class="result" id="result"></p>
+        </div>
+    
+        <script>
+            function factorial(n) {
+                if (n === 0 || n === 1) {
+                    return 1;
+                }
+                let result = 1;
+                for (let i = 2; i <= n; i++) {
+                    result *= i;
+                }
+                return result;
+            }
+    
+            function calculateCombinations() {
+                const totalSites = parseInt(document.getElementById('totalSites').value);
+                const replaceSites = parseInt(document.getElementById('replaceSites').value);
+                const resultElement = document.getElementById('result');
+    
+                if (isNaN(totalSites) || isNaN(replaceSites) || totalSites < 0 || replaceSites < 0 || replaceSites > totalSites) {
+                    resultElement.innerText = "Please enter valid numbers.";
+                    return;
+                }
+    
+                const combinations = factorial(totalSites) / (factorial(replaceSites) * factorial(totalSites - replaceSites));
+                const formattedCombinations = formatCombinations(combinations);
+                resultElement.innerText = `Possible Combinations: ${formattedCombinations}`;
+            }
+    
+            function formatCombinations(value) {
+                if (value < 1e10) { // If value is less than 10 billion, display normally
+                    return value.toString();
+                } else { // If value is large, display in scientific notation
+                    const exp = Math.floor(Math.log10(value));
+                    const mantissa = value / Math.pow(10, exp);
+                    return `${mantissa.toFixed(2)} × 10^${exp}`;
+                }
+            }
+        </script>
+    </body>
+    </html>
+    
+    <section>
+        <h2>Real Data Visualization: Plots of Energy and Ge-O-Ge Count</h2>
+        <p>In this section, we delve into the diverse data associated with one of the zeolite structures called UTL. Using <strong>UMAP (Uniform Manifold Approximation and Projection)</strong>, we visualize the various <strong>energy</strong> levels and <strong>Ge-O-Ge counts</strong> across various configurations of UTL zeolites.</p>
+        
+        <!-- Image for Relative Energy -->
+        <div style="text-align: center;">
+            <img src="images/relative_enrgy_UMAP.png" alt="Relative Energy Plot" style="max-width: 50%; height: 50%; border: 1px solid #a0d2eb">
+            <p>Figure 3: The variation of <strong>relative energy</strong> across different UTL zeolite configurations.</p>
+        </div>
+    
+        <!-- Image for Ge-O-Ge Count -->
+        <div style="text-align: center;">
+            <img src="images/geoge_UMAP.png" alt="Ge-O-Ge Count Plot" style="max-width: 50%; height: 50%; border: 1px solid #a0d2eb;">
+            <p>Figure 4: Illustrating the <strong>Ge-O-Ge count</strong> distribution in various UTL zeolite structures.</p>
+        </div>
+    
+        <p>This visualization illustrates the rich diversity in the structural arrangements of Ge atoms within UTL zeolites, highlighting how variations in the <strong>Ge-O-Ge count</strong> and <strong>Relative energy</strong> of these materials correlate with stability and efficiency. The next step is to analyze the underlying patterns and trends, enabling us to identify configurations that maximize stability and efficiency.</p
+    
+      
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive Regression Model</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                line-height: 1.6;
+                margin: 0;
+                padding: 2rem;
+            }
+            .container {
+                background: white;
+                padding: 2rem;
+                margin: 1rem 0;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            input {
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+                width: calc(100% - 1rem);
+            }
+            button {
+                padding: 0.5rem 1rem;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+            p.result {
+                font-weight: bold;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            table, th, td {
+                border: 1px solid #ddd;
+            }
+            th, td {
+                padding: 8px;
+                text-align: center;
+            }
+            .slider-container {
+                margin-top: 20px;
+            }
+            .slider-label {
+                margin-right: 10px;
+            }
+        </style>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
             <h2>Interactive Code: Build a Simple Regression Model</h2>
-            <p>Below is a regression model where you can input data and see how well it predicts outcomes. We’re predicting the <strong>energy</strong> of a zeolite structure based on its <strong>Ge-O-Ge atom counts</strong>.</p>
+            <p>Enter the X value to predict the Y value based on a regression model.</p>
+            
+            <input type="number" id="inputXValue" placeholder="Enter X Value" required>
+            <button onclick="predictY()">Predict Y</button>
+            <p class="result" id="predictedResult"></p>
+    
+            <h3>Data Input</h3>
+            <p>To update the regression model, enter X values and corresponding Y values below:</p>
+            <input type="number" id="inputXValueData" placeholder="X Value">
+            <input type="number" id="inputYValueData" placeholder="Corresponding Y Value">
+            <button onclick="addData()">Add Data</button>
+    
+            <h3>Data Table</h3>
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>X Value</th>
+                        <th>Y Value</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Default data will be inserted here -->
+                </tbody>
+            </table>
+    
+            <div id="regressionPlot" style="width: 720px; height: 600px;"></div> <!-- 12:10 aspect ratio -->
+    
+            <div class="slider-container">
+                <label class="slider-label">Slope (m):</label>
+                <input type="range" id="slopeSlider" min="-10" max="10" step="0.1" value="1" oninput="updateSliders()">
+                <span id="slopeValue">1</span>
+            </div>
+            <div class="slider-container">
+                <label class="slider-label">Intercept (c):</label>
+                <input type="range" id="interceptSlider" min="-10" max="10" step="0.1" value="0" oninput="updateSliders()">
+                <span id="interceptValue">0</span>
+            </div>
+            <p class="result" id="bestFitResult"></p>
+        </div>
+    
+        <script>
+            let X = [1, 2, 3, 4, 5]; // Default X values
+            let y = [3, 4, 2, 5, 7]; // Default Y values
+            let regressionModel;
+    
+            // Function to add new data points
+            function addData() {
+                const xValue = parseFloat(document.getElementById('inputXValueData').value);
+                const yValue = parseFloat(document.getElementById('inputYValueData').value);
+    
+                if (!isNaN(xValue) && !isNaN(yValue)) {
+                    X.push(xValue);
+                    y.push(yValue);
+                    updateTable();
+                    updateRegression();
+                    drawRegression();
+                } else {
+                    alert("Please enter valid numbers.");
+                }
+            }
+    
+            // Function to delete a data point
+            function deleteData(index) {
+                X.splice(index, 1);
+                y.splice(index, 1);
+                updateTable();
+                updateRegression();
+                drawRegression();
+            }
+    
+            // Function to predict Y value
+            function predictY() {
+                const inputX = parseFloat(document.getElementById('inputXValue').value);
+                if (!isNaN(inputX)) {
+                    const predictedY = regressionModel.predict(inputX);
+                    document.getElementById('predictedResult').innerText = 
+                        `Predicted Y value for X = ${inputX}: ${predictedY.toFixed(2)}`;
+                } else {
+                    alert("Please enter a valid X value.");
+                }
+            }
+    
+            // Function to update regression model
+            function updateRegression() {
+                // Simple Linear Regression Model
+                const n = X.length;
+                const sumX = X.reduce((a, b) => a + b, 0);
+                const sumY = y.reduce((a, b) => a + b, 0);
+                const sumXY = X.reduce((sum, xi, i) => sum + xi * y[i], 0);
+                const sumX2 = X.reduce((sum, xi) => sum + xi ** 2, 0);
+    
+                const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX ** 2);
+                const intercept = (sumY - slope * sumX) / n;
+    
+                regressionModel = {
+                    predict: (x) => slope * x + intercept,
+                    slope: slope,
+                    intercept: intercept
+                };
+    
+                // Display best fit result
+                const r = calculateR(slope, intercept);
+                document.getElementById('bestFitResult').innerText = 
+                    `Best Fit: y = ${slope.toFixed(2)}x + ${intercept.toFixed(2)}, R = ${r.toFixed(2)}`;
+            }
+    
+            // Function to calculate R value
+            function calculateR(slope, intercept) {
+                const meanY = y.reduce((a, b) => a + b, 0) / y.length;
+                const ssTotal = y.reduce((sum, yi) => sum + (yi - meanY) ** 2, 0);
+                const ssResidual = y.reduce((sum, yi, i) => sum + (yi - (slope * X[i] + intercept)) ** 2, 0);
+                const rSquared = 1 - (ssResidual / ssTotal);
+                return Math.sqrt(rSquared);
+            }
+    
+            // Function to draw regression line and scatter plot with Plotly
+            function drawRegression() {
+                const trace1 = {
+                    x: X,
+                    y: y,
+                    mode: 'markers',
+                    type: 'scatter',
+                    name: 'Data Points'
+                };
+    
+                const slope = parseFloat(document.getElementById('slopeSlider').value);
+                const intercept = parseFloat(document.getElementById('interceptSlider').value);
+    
+                const trace2 = {
+                    x: [Math.min(...X), Math.max(...X)],
+                    y: [slope * Math.min(...X) + intercept, slope * Math.max(...X) + intercept],
+                    mode: 'lines',
+                    type: 'scatter',
+                    name: `Fit: y = ${slope.toFixed(2)}x + ${intercept.toFixed(2)}`
+                };
+    
+                const r = calculateR(slope, intercept);
+    
+                const layout = {
+                    title: `Regression Plot (R = ${r.toFixed(2)})`,
+                    xaxis: { title: 'X' },
+                    yaxis: { title: 'Y' },
+                    showlegend: true,
+                    width: 720,  // 12 units
+                    height: 600  // 10 units
+                };
+    
+                Plotly.newPlot('regressionPlot', [trace1, trace2], layout);
+            }
+    
+            // Function to update the data table
+            function updateTable() {
+                const tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = ''; // Clear existing table rows
+    
+                X.forEach((xi, index) => {
+                    const row = tableBody.insertRow();
+                    const cellX = row.insertCell(0);
+                    const cellY = row.insertCell(1);
+                    const cellAction = row.insertCell(2);
+                    cellX.innerText = xi;
+                    cellY.innerText = y[index];
+                    cellAction.innerHTML = `<button onclick="deleteData(${index})">Delete</button>`;
+                });
+            }
+    
+            // Function to update sliders and redraw the plot
+            function updateSliders() {
+                const slope = parseFloat(document.getElementById('slopeSlider').value);
+                const intercept = parseFloat(document.getElementById('interceptSlider').value);
+                document.getElementById('slopeValue').innerText = slope;
+                document.getElementById('interceptValue').innerText = intercept;
+                drawRegression();
+            }
+    
+            // Initial draw and table update
+            updateRegression();
+            drawRegression();
+            updateTable();
+        </script>
+    </body>
+    </html>
 
-            <pre><code>
-# Simple regression model example in Python (sklearn)
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
+    <section>
+        <h2>Machine Learning Insights: Energy Prediction</h2>
+        <p>In the context of zeolite structures, the number of Ge-O-Ge bonds plays a crucial role in enhancing energetic stabilization. By analyzing real data, we can observe how variations in these atomic arrangements influence the stability of zeolite frameworks.</p>
+        <p>Through machine learning techniques, we can predict the stability of new zeolite structures even before they are synthesized in the lab. By training models on existing data, particularly focusing on the Ge-O-Ge bond counts, we gain insights into how these configurations contribute to energy efficiency and overall stability.</p>
+        
+        <h3>Structure-Propert Relationship</h3>
+        <div style="text-align: center;">
+            <img src="./images/geoge_ener_all_single.png" alt="Single Cell Structure" style="max-width: 70%; height: 70%; border: 1px solid #a0d2eb">
+            <p>Figure 5: Highlighting the arrangement of Ge-O-Ge bonds and their contribution to the overall stability of the framework.</p>
+        </div>
 
-# Sample data: Ge-O-Ge counts and corresponding energies
-X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
-y = np.array([3, 4, 2, 5, 7])
+        <p>The regression model exemplifies this approach. In advanced research, models like <strong>reactive neural networks</strong> can adapt and learn from changes in atomic bonding and bond-breaking patterns. This allows them to study real-life scenarios like catalysis, such as the optimization of reaction pathways or the development of more efficient catalysts.</p>
 
-# Initialize the model
-model = LinearRegression()
-model.fit(X, y)
 
-# Predict
-new_X = np.array([input("Enter a new Ge-O-Ge count: ")]).reshape(-1, 1)
-predicted_energy = model.predict(new_X)
+</div>
 
-# Plot the regression line
-plt.scatter(X, y, color='blue')
-plt.plot(X, model.predict(X), color='red')
-plt.xlabel('Ge-O-Ge Count')
-plt.ylabel('Energy')
-plt.title('Energy vs Ge-O-Ge Count')
-plt.show()
-
-print(f"The predicted energy for Ge-O-Ge count {new_X[0][0]} is {predicted_energy[0]}")
-            </code></pre>
-
-            <p>Try adjusting the inputs and observe how the energy changes. You'll also see the linear regression fit visually!</p>
-        </section>
-
-        <section>
-            <h2>Real Data Visualization: UMAP Plots of Energy vs Ge-O-Ge Count</h2>
-            <p>Now that you’ve seen a simple example, let's explore real scientific data. We use <strong>UMAP (Uniform Manifold Approximation and Projection)</strong> to visualize relationships between <strong>energy</strong> and <strong>Ge-O-Ge counts</strong> in real zeolite structures.</p>
-            <iframe src="your-UMAP-visualization-link-here"></iframe>
-            <p>UMAP helps us group similar structures and observe patterns that might otherwise be difficult to find. This data visualization shows how the distribution of <strong>Ge atoms</strong> affects the stability of zeolites.</p>
-        </section>
-
-        <section>
-            <h2>Machine Learning Insights: Energy Prediction</h2>
-            <p>Using real data, we see how machine learning provides insights that help predict the stability of new zeolite structures before they are even synthesized in a lab. By training models on existing data, we can forecast how changing atomic arrangements will affect energy and stability.</p>
-            <p>The regression model you interacted with earlier is just one example. In research, more advanced models like <strong>neural networks</strong> and <strong>decision trees</strong> are used to predict material properties with higher accuracy.</p>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Machine Learning in Computational Chemistry | Hosted on GitHub</p>
-    </footer>
-
+<footer>
+    <p>&copy; 2024 Nano-Materials Group OpenDay | Created by Indranil Saha </p>
+</footer>
 </body>
 </html>
