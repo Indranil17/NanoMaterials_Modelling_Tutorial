@@ -160,11 +160,11 @@
     
             function formatCombinations(value) {
                 if (value < 1e10) { // If value is less than 10 billion, display normally
-                    return value.toString();
+                    return Math.floor(value).toString();
                 } else { // If value is large, display in scientific notation
                     const exp = Math.floor(Math.log10(value));
-                    const mantissa = value / Math.pow(10, exp);
-                    return `${mantissa.toFixed(2)} × 10^${exp}`;
+                    const mantissa = Math.floor(value / Math.pow(10, exp));
+                    return `${mantissa} × 10^${exp}`;
                 }
             }
         </script>
@@ -177,13 +177,13 @@
         
         <!-- Image for Relative Energy -->
         <div style="text-align: center;">
-            <img src="images/relative_enrgy_UMAP.png" alt="Relative Energy Plot" style="max-width: 50%; height: 50%; border: 1px solid #a0d2eb">
+            <img src="images/ener_hist_umap.png" alt="Relative Energy Plot" style="max-width: 50%; height: 50%; border: 1px solid #a0d2eb">
             <p>Figure 3: The variation of <strong>relative energy</strong> across different UTL zeolite configurations.</p>
         </div>
     
         <!-- Image for Ge-O-Ge Count -->
         <div style="text-align: center;">
-            <img src="images/geoge_UMAP.png" alt="Ge-O-Ge Count Plot" style="max-width: 50%; height: 50%; border: 1px solid #a0d2eb;">
+            <img src="images/geoge_hist_umap.png" alt="Ge-O-Ge Count Plot" style="max-width: 50%; height: 50%; border: 1px solid #a0d2eb;">
             <p>Figure 4: Illustrating the <strong>Ge-O-Ge count</strong> distribution in various UTL zeolite structures.</p>
         </div>
     
